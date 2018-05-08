@@ -14,15 +14,13 @@ import twitter4j.conf.ConfigurationBuilder;
  * @author Acer
  */
 public class TwitterUser {
-    ConfigurationBuilder cb = new ConfigurationBuilder();
-    public ConfigurationBuilder createOauth(){
+    
+    public ConfigurationBuilder createOauth(ConfigurationBuilder cb){
         cb.setDebugEnabled(true)
         .setOAuthConsumerKey("HOzjKqyUq1ZdUVfyEuI0IQ8op")
         .setOAuthConsumerSecret("NtSENmTOOqVRkPoeAo74o5elX8gQjSmTbWkMgMZttrXa5eSTMQ")
         .setOAuthAccessToken("890151296342171648-FcA28BMXKSJtX5spD0xh0xWiwYJmCz1")
         .setOAuthAccessTokenSecret("nw43sCMpSps0zH1N0YTn0QzpVTl8DaJo2FEjGshi562hW");
-        TwitterFactory tf = new TwitterFactory(cb.build());
-        Twitter twitter = tf.getInstance();
         return cb;
     }
 }

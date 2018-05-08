@@ -23,14 +23,9 @@ import twitter4j.conf.ConfigurationBuilder;
 public class Tweet {
     
     TwitterUser tu = new TwitterUser();
-    
+    ConfigurationBuilder cb = new ConfigurationBuilder();
     public void pullTwitter() throws TwitterException {
-        ConfigurationBuilder cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true)
-        .setOAuthConsumerKey("HOzjKqyUq1ZdUVfyEuI0IQ8op")
-        .setOAuthConsumerSecret("NtSENmTOOqVRkPoeAo74o5elX8gQjSmTbWkMgMZttrXa5eSTMQ")
-        .setOAuthAccessToken("890151296342171648-FcA28BMXKSJtX5spD0xh0xWiwYJmCz1")
-        .setOAuthAccessTokenSecret("nw43sCMpSps0zH1N0YTn0QzpVTl8DaJo2FEjGshi562hW");
+        cb = tu.createOauth(cb);
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
         //Twitter twitter = TwitterFactory.getSingleton();
@@ -43,27 +38,27 @@ public class Tweet {
     }
 
     public void searchTweet(String input) {
-        ConfigurationBuilder cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true)
-        .setOAuthConsumerKey("HOzjKqyUq1ZdUVfyEuI0IQ8op")
-        .setOAuthConsumerSecret("NtSENmTOOqVRkPoeAo74o5elX8gQjSmTbWkMgMZttrXa5eSTMQ")
-        .setOAuthAccessToken("890151296342171648-FcA28BMXKSJtX5spD0xh0xWiwYJmCz1")
-        .setOAuthAccessTokenSecret("nw43sCMpSps0zH1N0YTn0QzpVTl8DaJo2FEjGshi562hW");
+        cb = tu.createOauth(cb);
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
         Query query = new Query(input);
         QueryResult result;
+        int count=0;
         try {
             result = twitter.search(query);
             do {
                 for (Status status : result.getTweets()) {
+                    count++;
                     System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
+                    System.out.println(count);
+                    
                 }
             } while ((query = result.nextQuery()) != null);
             System.exit(0);
         } catch (TwitterException ex) {
             Logger.getLogger(Tweet.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.print(count);
 
     }
 
