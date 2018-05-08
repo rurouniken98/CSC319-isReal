@@ -21,10 +21,22 @@ public class TweetSearch {
     public static void main(String[] args) throws TwitterException{
        Scanner sc = new Scanner(System.in);
        Tweet t = new Tweet();
-       t.pullTwitter();
-       System.out.println("Please input keyword");
-       String input = sc.next();
-       t.searchTweet(input);
+       t.textUserInterface();
+       //t.pullTwitter();
+       System.out.println("Please input command");
+       int command = sc.nextInt();
+       if(command==1){
+           System.out.println("Please input user");
+           String input = sc.next();
+           t.searchTweet(input);
+       }
+       else if(command==2){
+           System.out.println("Please input keword");
+           String input = sc.next();
+           t.getTweets(input);
+       }
+       
+       //t.getTweets("lovetose", 100, 100);
     }
     
 }
