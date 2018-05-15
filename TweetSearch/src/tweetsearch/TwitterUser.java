@@ -5,8 +5,6 @@
  */
 package tweetsearch;
 
-import twitter4j.Twitter;
-import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
 /**

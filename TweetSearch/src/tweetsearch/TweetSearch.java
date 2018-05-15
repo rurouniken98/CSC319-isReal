@@ -23,18 +23,8 @@ public class TweetSearch {
        Tweet t = new Tweet();
        t.textUserInterface();
        //t.pullTwitter();
-       System.out.println("Please input command");
-       int command = sc.nextInt();
-       if(command==1){
-           System.out.println("Please input user");
-           String input = sc.next();
-           t.searchTweet(input);
-       }
-       else if(command==2){
-           System.out.println("Please input keword");
-           String input = sc.next();
-           t.getTweets(input);
-       }
+       
+       //t.searchAgain();
        
        //t.getTweets("lovetose", 100, 100);
     }
