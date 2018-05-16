@@ -5,9 +5,6 @@
  */
 package tweetsearch;
 import twitter4j.*;
-import java.util.List;
-import java.util.Scanner;
-
 /**
  *
  * @author Acer
@@ -19,14 +16,10 @@ public class TweetSearch {
      * 
      */
     public static void main(String[] args) throws TwitterException{
-       Scanner sc = new Scanner(System.in);
+       
        Tweet t = new Tweet();
        t.textUserInterface();
-       //t.pullTwitter();
        
-       //t.searchAgain();
-       
-       //t.getTweets("lovetose", 100, 100);
     }
     
 }
