@@ -13,12 +13,14 @@ public class TweetSearch {
 
     /**
      * @param args the command line arguments
+     * @throws twitter4j.TwitterException
      * 
      */
     public static void main(String[] args) throws TwitterException{
-       
-       Tweet t = new Tweet();
-       t.textUserInterface();
+        TwitterSearchGUI t = new TwitterSearchGUI();
+        t.setVisible(true);
+        //Tweet tweet = new Tweet();
+        //tweet.textUserInterface();
        
     }
     

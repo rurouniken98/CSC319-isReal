@@ -6,17 +6,16 @@
 package tweetsearch;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import twitter4j.Location;
 import twitter4j.Paging;
 import twitter4j.Query;
 import twitter4j.QueryResult;
-import twitter4j.RateLimitStatus;
 import twitter4j.ResponseList;
 import twitter4j.Status;
-import twitter4j.Trend;
 import twitter4j.Trends;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -27,74 +26,19 @@ import twitter4j.conf.ConfigurationBuilder;
  *
  * @author Acer
  */
-public class Tweet {
-    
+public class Tweet extends TwitterSearchGUI{
     Scanner sc = new Scanner(System.in);
     TwitterUser tu = new TwitterUser();
     ConfigurationBuilder cb = new ConfigurationBuilder();
     Twitter twitter;
     List<Status> tweets = new ArrayList<>();
     TwitterFactory tf ;
+    List<String> allResult;
+    String description = "";
     
-    
-    
-    public void textUserInterface() throws TwitterException {
-        System.out.println("Twitter Search");
-        System.out.println("********************************************");
-        System.out.println("Search  : 1");
-        System.out.println("Get user timeline  : 2");
-        System.out.println("Please input command");
-        int command = sc.nextInt();
-        switch (command) {
-            case 1:
-                {
-                    System.out.println("Please input keword");
-                    String in = sc.next();
-                    searchTweets(in);
-                    break;
-                }
-                case 2:
-                {
-                    System.out.println("Please input user");
-                    String in = sc.next();
-                    getUserTweets(in);
-                    break;
-                }
-                case 3:
-                {
-                    System.out.println("Please input hashtag");
-                    String in = sc.next();
-                    hashtag(in);
-                    break;
-                }
-                case 4:
-                {
-                    System.out.println("Please input hashtag");
-                    String in = sc.next();
-                    getTrends();
-                    break;
-                }
-        }
-        /*System.out.println("Please input keyword:");
-        String input=sc.nextLine();
-        hashtag(input);*/
-       searchAgain();
-        
-    }
-    
-   public void searchAgain() throws TwitterException {
-        System.out.print("Do you want to search again?[y/n]: ");
-        String input = sc.next();
-        if (input.equalsIgnoreCase("y")) {
-            textUserInterface();
-        } else if (input.equalsIgnoreCase("n")) {
-            System.out.println("EXIT");
-            System.exit(0);
-        }
-    }
- 
-    
-   public void hashtag(String input) {
+   public List hashtag(String input) {
+        description = "Search tweets using Hashtag";
+        allResult = new ArrayList<>();
         String hashTag = "#" + input;
         int count = 100;
         long sinceId = 0;
@@ -114,6 +58,7 @@ public class Tweet {
             getTweets(querySince, twitter, "sinceId", sinceId, numberOfTweets);
             querySince = null;
         } while (checkIfSinceTweetsAreAvaliable(twitter, input, count, sinceId));
+        return allResult;
     }
 
     public  boolean checkIfSinceTweetsAreAvaliable(Twitter twitter, String hashTag, int count, long sinceId){
@@ -135,24 +80,24 @@ public class Tweet {
        return true;
     }
 
-    public  void getTweets(Query query, Twitter twitter, String mode, long sinceId, long numberOfTweets) {
-       long maxId = 0;
+    public  List getTweets(Query query, Twitter twitter, String mode, long sinceId, long numberOfTweets) {
+        
+        long maxId = 0;
         long whileCount = 0;
-          boolean getTweets = true;
+        boolean getTweets = true;
         while (getTweets) {
             try {
                 QueryResult result = twitter.search(query);
                 if (result.getTweets() == null || result.getTweets().isEmpty()) {
                    getTweets = false;
                 } else {
-                    System.out.println("***********************************************");
-                    System.out.println("Gathered " + result.getTweets().size() + " tweets");
+                   
                     int forCount = 0;
                     for (Status status : result.getTweets()) {
                         if (whileCount == 0 && forCount == 0) {
                             sinceId = status.getId();
                         }
-                        System.out.println("@" + status.getUser().getScreenName() + " : " + status.getUser().getName() + "--------" + status.getText());
+                        allResult.add("@" + status.getUser().getScreenName() + " : " + status.getUser().getName() + "--------" + status.getText());
                         if (forCount == result.getTweets().size() - 1) {
                             maxId = status.getId();
                         }
@@ -171,15 +116,16 @@ public class Tweet {
             whileCount++;
             
         }
+        return allResult;
+       // System.out.println("Total tweets count=======" + numberOfTweets);
         
-        System.out.println("Total tweets count=======" + numberOfTweets);
-      System.exit(0);
+      //System.exit(0);
         
     }    
     
 
     //Search all tweets of a user
-    public void searchTweets(String input) {
+    public void searchUserTweets(String input) {
         cb = tu.createOauth(cb);
         int wantedTweets = 112;
         long firstQueryID = Long.MAX_VALUE;
@@ -205,7 +151,7 @@ public class Tweet {
                 int count = 0;
                 do {
                     for (Status status : result.getTweets()) {
-                        System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
+                        System.out.print("@" + status.getUser().getScreenName() + ":" + status.getText());
                         count++;
                         System.out.print(count);
                     }
@@ -219,6 +165,7 @@ public class Tweet {
         }
     }
     public void getUserTweets(String input) {
+        description = "Search tweets using user id";
         cb = tu.createOauth(cb);
         tf = new TwitterFactory(cb.build());
         twitter = tf.getInstance();
@@ -250,31 +197,21 @@ public class Tweet {
     }
 
     
-    public void getTrends() throws TwitterException{
-        cb = tu.createOauth(cb);
-        tf = new TwitterFactory(cb.build());
-        twitter = tf.getInstance(); 
-        /*Trends trends = twitter.getPlaceTrends(1);
-         int count = 0;
-        for (Trend trend : trends.getTrends()) {
-            if (count < 10) {
-                System.out.println(trend.getName());
-                count++;
-            }
-        }*/
+    public void getCurrentTrends(int id){
         
-ResponseList<Location> locations;
-locations = twitter.getAvailableTrends();
-System.out.println("Showing available trends");
-for (Location location : locations) {
-    System.out.println(location.getName() + " (woeid:" + location.getWoeid() + ")");
-}
-        System.out.println("Please choose location");
-        int locate = sc.nextInt();
-        Trends trends = twitter.getPlaceTrends(locate);
-for (int i = 0; i < trends.getTrends().length; i++) {
-    System.out.println(trends.getTrends()[i].getName());
-}
+        try {
+            cb = tu.createOauth(cb);
+            tf = new TwitterFactory(cb.build());
+            twitter = tf.getInstance();
+            ResponseList<Location> locations = twitter.getAvailableTrends();
+            Trends trends = twitter.getPlaceTrends(id);
+            for (int i = 0; i < trends.getTrends().length; i++) {
+                System.out.println(trends.getTrends()[i].getName());
+                
+            }       } catch (TwitterException ex) {
+            Logger.getLogger(Tweet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
 
