@@ -50,71 +50,77 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="jLabel3" max="32767" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextField2" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jScrollPane4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" pref="579" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="579" max="-2" attributes="0"/>
+                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel1" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextField2" min="-2" pref="391" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" max="32767" attributes="0"/>
+                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                      <Component id="jLabel1" alignment="3" max="32767" attributes="0"/>
+                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jLabel5" pref="22" max="32767" attributes="0"/>
-                  <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="45" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel5" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jScrollPane4" pref="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel2" min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="361" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -122,12 +128,12 @@
   <SubComponents>
     <Component class="javax.swing.JComboBox" name="jComboBox1">
       <Properties>
+        <Property name="maximumRowCount" type="int" value="3"/>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
+          <StringArray count="3">
             <StringItem index="0" value="Search Tweets"/>
             <StringItem index="1" value="Search From Users"/>
             <StringItem index="2" value="Current Trends Tweets"/>
-            <StringItem index="3" value=""/>
           </StringArray>
         </Property>
         <Property name="keySelectionManager" type="javax.swing.JComboBox$KeySelectionManager" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -147,6 +153,9 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField2">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
@@ -166,486 +175,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Result(s) :"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox2">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="467">
-            <StringItem index="0" value="Worldwide 1"/>
-            <StringItem index="1" value="Acapulco 110978"/>
-            <StringItem index="2" value="Accra 1326075"/>
-            <StringItem index="3" value="Adana 2343678"/>
-            <StringItem index="4" value="Adelaide 1099805"/>
-            <StringItem index="5" value="Aguascalientes 111579"/>
-            <StringItem index="6" value="Ahmedabad 2295402"/>
-            <StringItem index="7" value="Ahsa 56120136"/>
-            <StringItem index="8" value="Albuquerque 2352824"/>
-            <StringItem index="9" value="Alexandria 1522006"/>
-            <StringItem index="10" value="Algeria 23424740"/>
-            <StringItem index="11" value="Algiers 1253079"/>
-            <StringItem index="12" value="Amman 1968902"/>
-            <StringItem index="13" value="Amritsar 2295388"/>
-            <StringItem index="14" value="Amsterdam 727232"/>
-            <StringItem index="15" value="Ankara 2343732"/>
-            <StringItem index="16" value="Ansan 1132444"/>
-            <StringItem index="17" value="Antalya 2343733"/>
-            <StringItem index="18" value="Antipolo 1198785"/>
-            <StringItem index="19" value="Argentina 23424747"/>
-            <StringItem index="20" value="Athens 946738"/>
-            <StringItem index="21" value="Atlanta 2357024"/>
-            <StringItem index="22" value="Auckland 2348079"/>
-            <StringItem index="23" value="Austin 2357536"/>
-            <StringItem index="24" value="Australia 23424748"/>
-            <StringItem index="25" value="Austria 23424750"/>
-            <StringItem index="26" value="Bahrain 23424753"/>
-            <StringItem index="27" value="Baltimore 2358820"/>
-            <StringItem index="28" value="Bandung 1047180"/>
-            <StringItem index="29" value="Bangalore 2295420"/>
-            <StringItem index="30" value="Bangkok 1225448"/>
-            <StringItem index="31" value="Barcelona 395273"/>
-            <StringItem index="32" value="Barcelona 753692"/>
-            <StringItem index="33" value="Barquisimeto 468382"/>
-            <StringItem index="34" value="Barranquilla 368151"/>
-            <StringItem index="35" value="Baton Rouge 2359991"/>
-            <StringItem index="36" value="Bekasi 1030077"/>
-            <StringItem index="37" value="Belarus 23424765"/>
-            <StringItem index="38" value="Belfast 44544"/>
-            <StringItem index="39" value="Belgium 23424757"/>
-            <StringItem index="40" value="Belo Horizonte 455821"/>
-            <StringItem index="41" value="Bel&#xe49;m 455820"/>
-            <StringItem index="42" value="Benin City 1387660"/>
-            <StringItem index="43" value="Bergen 857105"/>
-            <StringItem index="44" value="Berlin 638242"/>
-            <StringItem index="45" value="Bhopal 2295407"/>
-            <StringItem index="46" value="Bilbao 754542"/>
-            <StringItem index="47" value="Birmingham 12723"/>
-            <StringItem index="48" value="Birmingham 2364559"/>
-            <StringItem index="49" value="Blackpool 12903"/>
-            <StringItem index="50" value="Bogot&#xe41; 368148"/>
-            <StringItem index="51" value="Bologna 711080"/>
-            <StringItem index="52" value="Bordeaux 580778"/>
-            <StringItem index="53" value="Boston 2367105"/>
-            <StringItem index="54" value="Bournemouth 13383"/>
-            <StringItem index="55" value="Bras&#xe4d;lia 455819"/>
-            <StringItem index="56" value="Brazil 23424768"/>
-            <StringItem index="57" value="Bremen 641142"/>
-            <StringItem index="58" value="Brest 824382"/>
-            <StringItem index="59" value="Brighton 13911"/>
-            <StringItem index="60" value="Brisbane 1100661"/>
-            <StringItem index="61" value="Bristol 13963"/>
-            <StringItem index="62" value="Bucheon 1132445"/>
-            <StringItem index="63" value="Buenos Aires 468739"/>
-            <StringItem index="64" value="Bursa 2343843"/>
-            <StringItem index="65" value="Busan 1132447"/>
-            <StringItem index="66" value="Cagayan de Oro 1199002"/>
-            <StringItem index="67" value="Cairo 1521894"/>
-            <StringItem index="68" value="Calgary 8775"/>
-            <StringItem index="69" value="Cali 368149"/>
-            <StringItem index="70" value="Calocan 1167715"/>
-            <StringItem index="71" value="Campinas 455828"/>
-            <StringItem index="72" value="Can Tho 1252351"/>
-            <StringItem index="73" value="Canada 23424775"/>
-            <StringItem index="74" value="Canberra 1100968"/>
-            <StringItem index="75" value="Cape Town 1591691"/>
-            <StringItem index="76" value="Caracas 395269"/>
-            <StringItem index="77" value="Cardiff 15127"/>
-            <StringItem index="78" value="Cebu City 1199079"/>
-            <StringItem index="79" value="Changwon 1132449"/>
-            <StringItem index="80" value="Charlotte 2378426"/>
-            <StringItem index="81" value="Chelyabinsk 1997422"/>
-            <StringItem index="82" value="Chennai 2295424"/>
-            <StringItem index="83" value="Chiba 1117034"/>
-            <StringItem index="84" value="Chicago 2379574"/>
-            <StringItem index="85" value="Chihuahua 115958"/>
-            <StringItem index="86" value="Chile 23424782"/>
-            <StringItem index="87" value="Cincinnati 2380358"/>
-            <StringItem index="88" value="Ciudad Guayana 395275"/>
-            <StringItem index="89" value="Ciudad Juarez 116556"/>
-            <StringItem index="90" value="Cleveland 2381475"/>
-            <StringItem index="91" value="Cologne 667931"/>
-            <StringItem index="92" value="Colombia 23424787"/>
-            <StringItem index="93" value="Colorado Springs 2383489"/>
-            <StringItem index="94" value="Columbus 2383660"/>
-            <StringItem index="95" value="Concepcion 349860"/>
-            <StringItem index="96" value="Cork 560472"/>
-            <StringItem index="97" value="Coventry 17044"/>
-            <StringItem index="98" value="Culiac&#xe41;n 117994"/>
-            <StringItem index="99" value="Curitiba 455822"/>
-            <StringItem index="100" value="C&#xe53;rdoba 466861"/>
-            <StringItem index="101" value="Da Nang 1252376"/>
-            <StringItem index="102" value="Daegu 1132466"/>
-            <StringItem index="103" value="Daejeon 2345975"/>
-            <StringItem index="104" value="Dallas-Ft. Worth 2388929"/>
-            <StringItem index="105" value="Dammam 1939574"/>
-            <StringItem index="106" value="Darwin 1101597"/>
-            <StringItem index="107" value="Davao City 1199136"/>
-            <StringItem index="108" value="Delhi 20070458"/>
-            <StringItem index="109" value="Den Haag 726874"/>
-            <StringItem index="110" value="Denmark 23424796"/>
-            <StringItem index="111" value="Denver 2391279"/>
-            <StringItem index="112" value="Depok 1032539"/>
-            <StringItem index="113" value="Derby 18114"/>
-            <StringItem index="114" value="Detroit 2391585"/>
-            <StringItem index="115" value="Diyarbak1r 2343932"/>
-            <StringItem index="116" value="Dnipropetrovsk 918981"/>
-            <StringItem index="117" value="Dominican Republic 23424800"/>
-            <StringItem index="118" value="Donetsk 919163"/>
-            <StringItem index="119" value="Dortmund 645458"/>
-            <StringItem index="120" value="Dresden 645686"/>
-            <StringItem index="121" value="Dubai 1940345"/>
-            <StringItem index="122" value="Dublin 560743"/>
-            <StringItem index="123" value="Durban 1580913"/>
-            <StringItem index="124" value="Dusseldorf 646099"/>
-            <StringItem index="125" value="Ecatepec de Morelos 118466"/>
-            <StringItem index="126" value="Ecuador 23424801"/>
-            <StringItem index="127" value="Edinburgh 19344"/>
-            <StringItem index="128" value="Edmonton 8676"/>
-            <StringItem index="129" value="Egypt 23424802"/>
-            <StringItem index="130" value="El Paso 2397816"/>
-            <StringItem index="131" value="Eski_ehir 2343980"/>
-            <StringItem index="132" value="Essen 648820"/>
-            <StringItem index="133" value="Faisalabad 2211574"/>
-            <StringItem index="134" value="Fortaleza 455830"/>
-            <StringItem index="135" value="France 23424819"/>
-            <StringItem index="136" value="Frankfurt 650272"/>
-            <StringItem index="137" value="Fresno 2407517"/>
-            <StringItem index="138" value="Fukuoka 1117099"/>
-            <StringItem index="139" value="Galway 560912"/>
-            <StringItem index="140" value="Gaziantep 2343999"/>
-            <StringItem index="141" value="GdaDsk 493417"/>
-            <StringItem index="142" value="Geneva 782538"/>
-            <StringItem index="143" value="Genoa 716085"/>
-            <StringItem index="144" value="Germany 23424829"/>
-            <StringItem index="145" value="Ghana 23424824"/>
-            <StringItem index="146" value="Giza 1521643"/>
-            <StringItem index="147" value="Glasgow 21125"/>
-            <StringItem index="148" value="Goi&#xe42;nia 455831"/>
-            <StringItem index="149" value="Gomel 825978"/>
-            <StringItem index="150" value="Gothenburg 890869"/>
-            <StringItem index="151" value="Goyang 1130853"/>
-            <StringItem index="152" value="Greece 23424833"/>
-            <StringItem index="153" value="Greensboro 2414469"/>
-            <StringItem index="154" value="Grodno 825848"/>
-            <StringItem index="155" value="Guadalajara 124162"/>
-            <StringItem index="156" value="Guarulhos 455867"/>
-            <StringItem index="157" value="Guatemala 23424834"/>
-            <StringItem index="158" value="Guatemala City 83123"/>
-            <StringItem index="159" value="Guayaquil 375733"/>
-            <StringItem index="160" value="Gwangju 1132481"/>
-            <StringItem index="161" value="Hai Phong 1236690"/>
-            <StringItem index="162" value="Haifa 1967449"/>
-            <StringItem index="163" value="Hamamatsu 1117155"/>
-            <StringItem index="164" value="Hamburg 656958"/>
-            <StringItem index="165" value="Hanoi 1236594"/>
-            <StringItem index="166" value="Harrisburg 2418046"/>
-            <StringItem index="167" value="Hermosillo 124785"/>
-            <StringItem index="168" value="Hiroshima 1117227"/>
-            <StringItem index="169" value="Ho Chi Minh City 1252431"/>
-            <StringItem index="170" value="Honolulu 2423945"/>
-            <StringItem index="171" value="Houston 2424766"/>
-            <StringItem index="172" value="Hull 25211"/>
-            <StringItem index="173" value="Hulu Langat 56013645"/>
-            <StringItem index="174" value="Hyderabad 2295414"/>
-            <StringItem index="175" value="Ibadan 1393672"/>
-            <StringItem index="176" value="Incheon 1132496"/>
-            <StringItem index="177" value="India 23424848"/>
-            <StringItem index="178" value="Indianapolis 2427032"/>
-            <StringItem index="179" value="Indonesia 23424846"/>
-            <StringItem index="180" value="Indore 2295408"/>
-            <StringItem index="181" value="Ipoh 1154679"/>
-            <StringItem index="182" value="Ireland 23424803"/>
-            <StringItem index="183" value="Irkutsk 2121040"/>
-            <StringItem index="184" value="Israel 23424852"/>
-            <StringItem index="185" value="Istanbul 2344116"/>
-            <StringItem index="186" value="Italy 23424853"/>
-            <StringItem index="187" value="Izmir 2344117"/>
-            <StringItem index="188" value="Jackson 2428184"/>
-            <StringItem index="189" value="Jacksonville 2428344"/>
-            <StringItem index="190" value="Jaipur 2295401"/>
-            <StringItem index="191" value="Jakarta 1047378"/>
-            <StringItem index="192" value="Japan 23424856"/>
-            <StringItem index="193" value="Jeddah 1939873"/>
-            <StringItem index="194" value="Jerusalem 1968222"/>
-            <StringItem index="195" value="Johannesburg 1582504"/>
-            <StringItem index="196" value="Johor Bahru 1154698"/>
-            <StringItem index="197" value="Jordan 23424860"/>
-            <StringItem index="198" value="Kaduna 1396439"/>
-            <StringItem index="199" value="Kajang 1141268"/>
-            <StringItem index="200" value="Kano 1396803"/>
-            <StringItem index="201" value="Kanpur 2295378"/>
-            <StringItem index="202" value="Kansas City 2430683"/>
-            <StringItem index="203" value="Karachi 2211096"/>
-            <StringItem index="204" value="Kawasaki 1117502"/>
-            <StringItem index="205" value="Kayseri 2344174"/>
-            <StringItem index="206" value="Kazan 2121267"/>
-            <StringItem index="207" value="Kenya 23424863"/>
-            <StringItem index="208" value="Khabarovsk 2018708"/>
-            <StringItem index="209" value="Kharkiv 922137"/>
-            <StringItem index="210" value="Kitakyushu 1110809"/>
-            <StringItem index="211" value="Klang 1154726"/>
-            <StringItem index="212" value="Kobe 1117545"/>
-            <StringItem index="213" value="Kolkata 2295386"/>
-            <StringItem index="214" value="Konya 2344210"/>
-            <StringItem index="215" value="Korea 23424868"/>
-            <StringItem index="216" value="Krak&#xe53;w 502075"/>
-            <StringItem index="217" value="Krasnodar 2028717"/>
-            <StringItem index="218" value="Krasnoyarsk 2029043"/>
-            <StringItem index="219" value="Kuala Lumpur 1154781"/>
-            <StringItem index="220" value="Kumamoto 1117605"/>
-            <StringItem index="221" value="Kumasi 1330595"/>
-            <StringItem index="222" value="Kuwait 23424870"/>
-            <StringItem index="223" value="Kyiv 924938"/>
-            <StringItem index="224" value="Kyoto 15015372"/>
-            <StringItem index="225" value="Lagos 1398823"/>
-            <StringItem index="226" value="Lahore 2211177"/>
-            <StringItem index="227" value="Las Palmas 764814"/>
-            <StringItem index="228" value="Las Vegas 2436704"/>
-            <StringItem index="229" value="Latvia 23424874"/>
-            <StringItem index="230" value="Lausanne 783058"/>
-            <StringItem index="231" value="Lebanon 23424873"/>
-            <StringItem index="232" value="Leeds 26042"/>
-            <StringItem index="233" value="Leicester 26062"/>
-            <StringItem index="234" value="Leipzig 671072"/>
-            <StringItem index="235" value="Le&#xe53;n 131068"/>
-            <StringItem index="236" value="Lille 608105"/>
-            <StringItem index="237" value="Lima 418440"/>
-            <StringItem index="238" value="Liverpool 26734"/>
-            <StringItem index="239" value="Lodz 505120"/>
-            <StringItem index="240" value="London 44418"/>
-            <StringItem index="241" value="Long Beach 2441472"/>
-            <StringItem index="242" value="Los Angeles 2442047"/>
-            <StringItem index="243" value="Louisville 2442327"/>
-            <StringItem index="244" value="Lucknow 2295377"/>
-            <StringItem index="245" value="Lviv 924943"/>
-            <StringItem index="246" value="Lyon 609125"/>
-            <StringItem index="247" value="Madrid 766273"/>
-            <StringItem index="248" value="Makassar 1046138"/>
-            <StringItem index="249" value="Makati 1180689"/>
-            <StringItem index="250" value="Malaga 766356"/>
-            <StringItem index="251" value="Malaysia 23424901"/>
-            <StringItem index="252" value="Manaus 455833"/>
-            <StringItem index="253" value="Manchester 28218"/>
-            <StringItem index="254" value="Manila 1199477"/>
-            <StringItem index="255" value="Maracaibo 395270"/>
-            <StringItem index="256" value="Maracay 395271"/>
-            <StringItem index="257" value="Marseille 610264"/>
-            <StringItem index="258" value="Matur&#xe4d;n 468384"/>
-            <StringItem index="259" value="Mecca 1939897"/>
-            <StringItem index="260" value="Medan 1047908"/>
-            <StringItem index="261" value="Medell&#xe4d;n 368150"/>
-            <StringItem index="262" value="Medina 1937801"/>
-            <StringItem index="263" value="Melbourne 1103816"/>
-            <StringItem index="264" value="Memphis 2449323"/>
-            <StringItem index="265" value="Mendoza 332471"/>
-            <StringItem index="266" value="Mersin 2323778"/>
-            <StringItem index="267" value="Mesa 2449808"/>
-            <StringItem index="268" value="Mexicali 133475"/>
-            <StringItem index="269" value="Mexico 23424900"/>
-            <StringItem index="270" value="Mexico City 116545"/>
-            <StringItem index="271" value="Miami 2450022"/>
-            <StringItem index="272" value="Middlesbrough 28869"/>
-            <StringItem index="273" value="Milan 718345"/>
-            <StringItem index="274" value="Milwaukee 2451822"/>
-            <StringItem index="275" value="Minneapolis 2452078"/>
-            <StringItem index="276" value="Minsk 834463"/>
-            <StringItem index="277" value="Mombasa 1528335"/>
-            <StringItem index="278" value="Monterrey 134047"/>
-            <StringItem index="279" value="Montpellier 612977"/>
-            <StringItem index="280" value="Montreal 3534"/>
-            <StringItem index="281" value="Morelia 134091"/>
-            <StringItem index="282" value="Moscow 2122265"/>
-            <StringItem index="283" value="Multan 2211269"/>
-            <StringItem index="284" value="Mumbai 2295411"/>
-            <StringItem index="285" value="Munich 676757"/>
-            <StringItem index="286" value="Murcia 768026"/>
-            <StringItem index="287" value="Muscat 2268284"/>
-            <StringItem index="288" value="M&#xe49;rida 133327"/>
-            <StringItem index="289" value="Nagoya 1117817"/>
-            <StringItem index="290" value="Nagpur 2282863"/>
-            <StringItem index="291" value="Nairobi 1528488"/>
-            <StringItem index="292" value="Nantes 613858"/>
-            <StringItem index="293" value="Naples 719258"/>
-            <StringItem index="294" value="Nashville 2457170"/>
-            <StringItem index="295" value="Naucalpan de Ju&#xe41;rez 134395"/>
-            <StringItem index="296" value="Netherlands 23424909"/>
-            <StringItem index="297" value="New Haven 2458410"/>
-            <StringItem index="298" value="New Orleans 2458833"/>
-            <StringItem index="299" value="New York 2459115"/>
-            <StringItem index="300" value="New Zealand 23424916"/>
-            <StringItem index="301" value="Newcastle 30079"/>
-            <StringItem index="302" value="Nezahualc&#xe53;yotl 116564"/>
-            <StringItem index="303" value="Nigeria 23424908"/>
-            <StringItem index="304" value="Niigata 1117881"/>
-            <StringItem index="305" value="Nizhny Novgorod 2122471"/>
-            <StringItem index="306" value="Norfolk 2460389"/>
-            <StringItem index="307" value="Norway 23424910"/>
-            <StringItem index="308" value="Nottingham 30720"/>
-            <StringItem index="309" value="Novosibirsk 2122541"/>
-            <StringItem index="310" value="Odesa 929398"/>
-            <StringItem index="311" value="Okayama 90036018"/>
-            <StringItem index="312" value="Okinawa 2345896"/>
-            <StringItem index="313" value="Oklahoma City 2464592"/>
-            <StringItem index="314" value="Omaha 2465512"/>
-            <StringItem index="315" value="Oman 23424898"/>
-            <StringItem index="316" value="Omsk 2122641"/>
-            <StringItem index="317" value="Orlando 2466256"/>
-            <StringItem index="318" value="Osaka 15015370"/>
-            <StringItem index="319" value="Oslo 862592"/>
-            <StringItem index="320" value="Ottawa 3369"/>
-            <StringItem index="321" value="Pakistan 23424922"/>
-            <StringItem index="322" value="Palembang 1048059"/>
-            <StringItem index="323" value="Palermo 719846"/>
-            <StringItem index="324" value="Palma 769293"/>
-            <StringItem index="325" value="Panama 23424924"/>
-            <StringItem index="326" value="Paris 615702"/>
-            <StringItem index="327" value="Pasig 1187115"/>
-            <StringItem index="328" value="Patna 2295381"/>
-            <StringItem index="329" value="Pekanbaru 1040779"/>
-            <StringItem index="330" value="Perm 2122814"/>
-            <StringItem index="331" value="Perth 1098081"/>
-            <StringItem index="332" value="Peru 23424919"/>
-            <StringItem index="333" value="Petaling 56013632"/>
-            <StringItem index="334" value="Philadelphia 2471217"/>
-            <StringItem index="335" value="Philippines 23424934"/>
-            <StringItem index="336" value="Phoenix 2471390"/>
-            <StringItem index="337" value="Pittsburgh 2473224"/>
-            <StringItem index="338" value="Plymouth 32185"/>
-            <StringItem index="339" value="Poland 23424923"/>
-            <StringItem index="340" value="Port Elizabeth 1586614"/>
-            <StringItem index="341" value="Port Harcourt 1404447"/>
-            <StringItem index="342" value="Portland 2475687"/>
-            <StringItem index="343" value="Porto Alegre 455823"/>
-            <StringItem index="344" value="Portsmouth 32452"/>
-            <StringItem index="345" value="Portugal 23424925"/>
-            <StringItem index="346" value="PoznaD 514048"/>
-            <StringItem index="347" value="Preston 32566"/>
-            <StringItem index="348" value="Pretoria 1586638"/>
-            <StringItem index="349" value="Providence 2477058"/>
-            <StringItem index="350" value="Puebla 137612"/>
-            <StringItem index="351" value="Puerto Rico 23424935"/>
-            <StringItem index="352" value="Pune 2295412"/>
-            <StringItem index="353" value="Qatar 23424930"/>
-            <StringItem index="354" value="Quebec 3444"/>
-            <StringItem index="355" value="Quer&#xe49;taro 138045"/>
-            <StringItem index="356" value="Quezon City 1199682"/>
-            <StringItem index="357" value="Quito 375732"/>
-            <StringItem index="358" value="Rajkot 2295404"/>
-            <StringItem index="359" value="Raleigh 2478307"/>
-            <StringItem index="360" value="Ranchi 2295383"/>
-            <StringItem index="361" value="Rawalpindi 2211387"/>
-            <StringItem index="362" value="Recife 455824"/>
-            <StringItem index="363" value="Rennes 619163"/>
-            <StringItem index="364" value="Richmond 2480894"/>
-            <StringItem index="365" value="Riga 854823"/>
-            <StringItem index="366" value="Rio de Janeiro 455825"/>
-            <StringItem index="367" value="Riyadh 1939753"/>
-            <StringItem index="368" value="Rome 721943"/>
-            <StringItem index="369" value="Rosario 466862"/>
-            <StringItem index="370" value="Rostov-on-Don 2123177"/>
-            <StringItem index="371" value="Rotterdam 733075"/>
-            <StringItem index="372" value="Russia 23424936"/>
-            <StringItem index="373" value="Sacramento 2486340"/>
-            <StringItem index="374" value="Sagamihara 1118072"/>
-            <StringItem index="375" value="Saint Petersburg 2123260"/>
-            <StringItem index="376" value="Saitama 1116753"/>
-            <StringItem index="377" value="Salt Lake City 2487610"/>
-            <StringItem index="378" value="Saltillo 141272"/>
-            <StringItem index="379" value="Salvador 455826"/>
-            <StringItem index="380" value="Samara 2077746"/>
-            <StringItem index="381" value="San Antonio 2487796"/>
-            <StringItem index="382" value="San Diego 2487889"/>
-            <StringItem index="383" value="San Francisco 2487956"/>
-            <StringItem index="384" value="San Jose 2488042"/>
-            <StringItem index="385" value="San Luis Potos&#xe4d; 144265"/>
-            <StringItem index="386" value="Santiago 349859"/>
-            <StringItem index="387" value="Santo Domingo 76456"/>
-            <StringItem index="388" value="Sapporo 1118108"/>
-            <StringItem index="389" value="Saudi Arabia 23424938"/>
-            <StringItem index="390" value="Seattle 2490383"/>
-            <StringItem index="391" value="Semarang 1048324"/>
-            <StringItem index="392" value="Sendai 1118129"/>
-            <StringItem index="393" value="Seongnam 1132559"/>
-            <StringItem index="394" value="Seoul 1132599"/>
-            <StringItem index="395" value="Seville 774508"/>
-            <StringItem index="396" value="Sharjah 1940119"/>
-            <StringItem index="397" value="Sheffield 34503"/>
-            <StringItem index="398" value="Singapore 1062617"/>
-            <StringItem index="399" value="Singapore 23424948"/>
-            <StringItem index="400" value="South Africa 23424942"/>
-            <StringItem index="401" value="Soweto 1587677"/>
-            <StringItem index="402" value="Spain 23424950"/>
-            <StringItem index="403" value="Srinagar 2295387"/>
-            <StringItem index="404" value="St. Louis 2486982"/>
-            <StringItem index="405" value="Stockholm 906057"/>
-            <StringItem index="406" value="Stoke-on-Trent 36240"/>
-            <StringItem index="407" value="Strasbourg 627791"/>
-            <StringItem index="408" value="Stuttgart 698064"/>
-            <StringItem index="409" value="Surabaya 1044316"/>
-            <StringItem index="410" value="Surat 2295405"/>
-            <StringItem index="411" value="Suwon 1132567"/>
-            <StringItem index="412" value="Swansea 36758"/>
-            <StringItem index="413" value="Sweden 23424954"/>
-            <StringItem index="414" value="Switzerland 23424957"/>
-            <StringItem index="415" value="Sydney 1105779"/>
-            <StringItem index="416" value="S&#xe43;o Lu&#xe4d;s 455834"/>
-            <StringItem index="417" value="S&#xe43;o Paulo 455827"/>
-            <StringItem index="418" value="Taguig 1195098"/>
-            <StringItem index="419" value="Takamatsu 1118285"/>
-            <StringItem index="420" value="Tallahassee 2503713"/>
-            <StringItem index="421" value="Tampa 2503863"/>
-            <StringItem index="422" value="Tangerang 1048536"/>
-            <StringItem index="423" value="Tel Aviv 1968212"/>
-            <StringItem index="424" value="Thailand 23424960"/>
-            <StringItem index="425" value="Thane 2295410"/>
-            <StringItem index="426" value="Thessaloniki 963291"/>
-            <StringItem index="427" value="Tijuana 149361"/>
-            <StringItem index="428" value="Tokyo 1118370"/>
-            <StringItem index="429" value="Toluca 149769"/>
-            <StringItem index="430" value="Toronto 4118"/>
-            <StringItem index="431" value="Toulouse 628886"/>
-            <StringItem index="432" value="Tucson 2508428"/>
-            <StringItem index="433" value="Turin 725003"/>
-            <StringItem index="434" value="Turkey 23424969"/>
-            <StringItem index="435" value="Turmero 395277"/>
-            <StringItem index="436" value="Ufa 2124045"/>
-            <StringItem index="437" value="Ukraine 23424976"/>
-            <StringItem index="438" value="Ulsan 1132578"/>
-            <StringItem index="439" value="United Arab Emirates 23424738"/>
-            <StringItem index="440" value="United Kingdom 23424975"/>
-            <StringItem index="441" value="United States 23424977"/>
-            <StringItem index="442" value="Utrecht 734047"/>
-            <StringItem index="443" value="Valencia 395272"/>
-            <StringItem index="444" value="Valencia 776688"/>
-            <StringItem index="445" value="Valparaiso 349861"/>
-            <StringItem index="446" value="Vancouver 9807"/>
-            <StringItem index="447" value="Venezuela 23424982"/>
-            <StringItem index="448" value="Vienna 551801"/>
-            <StringItem index="449" value="Vietnam 23424984"/>
-            <StringItem index="450" value="Virginia Beach 2512636"/>
-            <StringItem index="451" value="Vladivostok 2124288"/>
-            <StringItem index="452" value="Volgograd 2124298"/>
-            <StringItem index="453" value="Voronezh 2108210"/>
-            <StringItem index="454" value="Warsaw 523920"/>
-            <StringItem index="455" value="Washington 2514815"/>
-            <StringItem index="456" value="Winnipeg 2972"/>
-            <StringItem index="457" value="Wroclaw 526363"/>
-            <StringItem index="458" value="Yekaterinburg 2112237"/>
-            <StringItem index="459" value="Yokohama 1118550"/>
-            <StringItem index="460" value="Yongin 1132094"/>
-            <StringItem index="461" value="Zamboanga City 1199980"/>
-            <StringItem index="462" value="Zapopan 151582"/>
-            <StringItem index="463" value="Zaporozhye 939628"/>
-            <StringItem index="464" value="Zaragoza 779063"/>
-            <StringItem index="465" value="Zurich 784794"/>
-            <StringItem index="466" value=" "/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -668,12 +197,10 @@
         <Property name="text" type="java.lang.String" value="Number of Result(s) :"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <Properties>
         <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="verticalScrollBarPolicy" type="int" value="21"/>
-        <Property name="wheelScrollingEnabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -681,11 +208,50 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea3">
+        <Component class="javax.swing.JTextArea" name="jTextArea2">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Description :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="66" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Welcome to tweet search [ Dev by IsReal]"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+      <Properties>
+        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+        <Property name="verticalScrollBarPolicy" type="int" value="21"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea4">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
+            <Property name="autoscrolls" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>

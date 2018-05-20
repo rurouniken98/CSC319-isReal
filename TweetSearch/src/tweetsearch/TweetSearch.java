@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package tweetsearch;
-import twitter4j.*;
+
+import javax.swing.JFrame;
+
 /**
  *
  * @author Acer
@@ -13,16 +15,12 @@ public class TweetSearch {
 
     /**
      * @param args the command line arguments
-     * @throws twitter4j.TwitterException
-     * 
      */
-    public static void main(String[] args) throws TwitterException{
-        TwitterSearchGUI t = new TwitterSearchGUI();
-        t.setVisible(true);
-        //Tweet tweet = new Tweet();
-        //tweet.textUserInterface();
-       
+    public static void main(String[] args) {
+        JFrame tw = new TwitterSearchGUI();
+        
+        tw.setVisible(true);
+
     }
     
 }
-

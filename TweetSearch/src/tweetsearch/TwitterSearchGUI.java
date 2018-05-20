@@ -5,22 +5,21 @@
  */
 package tweetsearch;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author Acer
  */
 public class TwitterSearchGUI extends javax.swing.JFrame {
-    Tweet t ;
+    Tweet t = new Tweet();
     /**
      * Creates new form TwitterSearchGUI
      */
     public TwitterSearchGUI() {
+        setTitle("Twitter Search");
         initComponents();
+        jTextArea2.setText("Searching tweets using hashtags. \n( Input words no need #.) ");
+        
     }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,13 +37,15 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -61,12 +62,19 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Search Tweets", "Search From Users", "Current Trends Tweets", "" }));
+        jComboBox1.setMaximumRowCount(3);
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Search Tweets", "Search From Users", "Current Trends Tweets" }));
         jComboBox1.setKeySelectionManager(null);
         jComboBox1.setName(""); // NOI18N
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
             }
         });
 
@@ -86,8 +94,6 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
 
         jLabel2.setText("Result(s) :");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Worldwide 1", "Acapulco 110978", "Accra 1326075", "Adana 2343678", "Adelaide 1099805", "Aguascalientes 111579", "Ahmedabad 2295402", "Ahsa 56120136", "Albuquerque 2352824", "Alexandria 1522006", "Algeria 23424740", "Algiers 1253079", "Amman 1968902", "Amritsar 2295388", "Amsterdam 727232", "Ankara 2343732", "Ansan 1132444", "Antalya 2343733", "Antipolo 1198785", "Argentina 23424747", "Athens 946738", "Atlanta 2357024", "Auckland 2348079", "Austin 2357536", "Australia 23424748", "Austria 23424750", "Bahrain 23424753", "Baltimore 2358820", "Bandung 1047180", "Bangalore 2295420", "Bangkok 1225448", "Barcelona 395273", "Barcelona 753692", "Barquisimeto 468382", "Barranquilla 368151", "Baton Rouge 2359991", "Bekasi 1030077", "Belarus 23424765", "Belfast 44544", "Belgium 23424757", "Belo Horizonte 455821", "Bel้m 455820", "Benin City 1387660", "Bergen 857105", "Berlin 638242", "Bhopal 2295407", "Bilbao 754542", "Birmingham 12723", "Birmingham 2364559", "Blackpool 12903", "Bogotแ 368148", "Bologna 711080", "Bordeaux 580778", "Boston 2367105", "Bournemouth 13383", "Brasํlia 455819", "Brazil 23424768", "Bremen 641142", "Brest 824382", "Brighton 13911", "Brisbane 1100661", "Bristol 13963", "Bucheon 1132445", "Buenos Aires 468739", "Bursa 2343843", "Busan 1132447", "Cagayan de Oro 1199002", "Cairo 1521894", "Calgary 8775", "Cali 368149", "Calocan 1167715", "Campinas 455828", "Can Tho 1252351", "Canada 23424775", "Canberra 1100968", "Cape Town 1591691", "Caracas 395269", "Cardiff 15127", "Cebu City 1199079", "Changwon 1132449", "Charlotte 2378426", "Chelyabinsk 1997422", "Chennai 2295424", "Chiba 1117034", "Chicago 2379574", "Chihuahua 115958", "Chile 23424782", "Cincinnati 2380358", "Ciudad Guayana 395275", "Ciudad Juarez 116556", "Cleveland 2381475", "Cologne 667931", "Colombia 23424787", "Colorado Springs 2383489", "Columbus 2383660", "Concepcion 349860", "Cork 560472", "Coventry 17044", "Culiacแn 117994", "Curitiba 455822", "C๓rdoba 466861", "Da Nang 1252376", "Daegu 1132466", "Daejeon 2345975", "Dallas-Ft. Worth 2388929", "Dammam 1939574", "Darwin 1101597", "Davao City 1199136", "Delhi 20070458", "Den Haag 726874", "Denmark 23424796", "Denver 2391279", "Depok 1032539", "Derby 18114", "Detroit 2391585", "Diyarbak1r 2343932", "Dnipropetrovsk 918981", "Dominican Republic 23424800", "Donetsk 919163", "Dortmund 645458", "Dresden 645686", "Dubai 1940345", "Dublin 560743", "Durban 1580913", "Dusseldorf 646099", "Ecatepec de Morelos 118466", "Ecuador 23424801", "Edinburgh 19344", "Edmonton 8676", "Egypt 23424802", "El Paso 2397816", "Eski_ehir 2343980", "Essen 648820", "Faisalabad 2211574", "Fortaleza 455830", "France 23424819", "Frankfurt 650272", "Fresno 2407517", "Fukuoka 1117099", "Galway 560912", "Gaziantep 2343999", "GdaDsk 493417", "Geneva 782538", "Genoa 716085", "Germany 23424829", "Ghana 23424824", "Giza 1521643", "Glasgow 21125", "Goiโnia 455831", "Gomel 825978", "Gothenburg 890869", "Goyang 1130853", "Greece 23424833", "Greensboro 2414469", "Grodno 825848", "Guadalajara 124162", "Guarulhos 455867", "Guatemala 23424834", "Guatemala City 83123", "Guayaquil 375733", "Gwangju 1132481", "Hai Phong 1236690", "Haifa 1967449", "Hamamatsu 1117155", "Hamburg 656958", "Hanoi 1236594", "Harrisburg 2418046", "Hermosillo 124785", "Hiroshima 1117227", "Ho Chi Minh City 1252431", "Honolulu 2423945", "Houston 2424766", "Hull 25211", "Hulu Langat 56013645", "Hyderabad 2295414", "Ibadan 1393672", "Incheon 1132496", "India 23424848", "Indianapolis 2427032", "Indonesia 23424846", "Indore 2295408", "Ipoh 1154679", "Ireland 23424803", "Irkutsk 2121040", "Israel 23424852", "Istanbul 2344116", "Italy 23424853", "Izmir 2344117", "Jackson 2428184", "Jacksonville 2428344", "Jaipur 2295401", "Jakarta 1047378", "Japan 23424856", "Jeddah 1939873", "Jerusalem 1968222", "Johannesburg 1582504", "Johor Bahru 1154698", "Jordan 23424860", "Kaduna 1396439", "Kajang 1141268", "Kano 1396803", "Kanpur 2295378", "Kansas City 2430683", "Karachi 2211096", "Kawasaki 1117502", "Kayseri 2344174", "Kazan 2121267", "Kenya 23424863", "Khabarovsk 2018708", "Kharkiv 922137", "Kitakyushu 1110809", "Klang 1154726", "Kobe 1117545", "Kolkata 2295386", "Konya 2344210", "Korea 23424868", "Krak๓w 502075", "Krasnodar 2028717", "Krasnoyarsk 2029043", "Kuala Lumpur 1154781", "Kumamoto 1117605", "Kumasi 1330595", "Kuwait 23424870", "Kyiv 924938", "Kyoto 15015372", "Lagos 1398823", "Lahore 2211177", "Las Palmas 764814", "Las Vegas 2436704", "Latvia 23424874", "Lausanne 783058", "Lebanon 23424873", "Leeds 26042", "Leicester 26062", "Leipzig 671072", "Le๓n 131068", "Lille 608105", "Lima 418440", "Liverpool 26734", "Lodz 505120", "London 44418", "Long Beach 2441472", "Los Angeles 2442047", "Louisville 2442327", "Lucknow 2295377", "Lviv 924943", "Lyon 609125", "Madrid 766273", "Makassar 1046138", "Makati 1180689", "Malaga 766356", "Malaysia 23424901", "Manaus 455833", "Manchester 28218", "Manila 1199477", "Maracaibo 395270", "Maracay 395271", "Marseille 610264", "Maturํn 468384", "Mecca 1939897", "Medan 1047908", "Medellํn 368150", "Medina 1937801", "Melbourne 1103816", "Memphis 2449323", "Mendoza 332471", "Mersin 2323778", "Mesa 2449808", "Mexicali 133475", "Mexico 23424900", "Mexico City 116545", "Miami 2450022", "Middlesbrough 28869", "Milan 718345", "Milwaukee 2451822", "Minneapolis 2452078", "Minsk 834463", "Mombasa 1528335", "Monterrey 134047", "Montpellier 612977", "Montreal 3534", "Morelia 134091", "Moscow 2122265", "Multan 2211269", "Mumbai 2295411", "Munich 676757", "Murcia 768026", "Muscat 2268284", "M้rida 133327", "Nagoya 1117817", "Nagpur 2282863", "Nairobi 1528488", "Nantes 613858", "Naples 719258", "Nashville 2457170", "Naucalpan de Juแrez 134395", "Netherlands 23424909", "New Haven 2458410", "New Orleans 2458833", "New York 2459115", "New Zealand 23424916", "Newcastle 30079", "Nezahualc๓yotl 116564", "Nigeria 23424908", "Niigata 1117881", "Nizhny Novgorod 2122471", "Norfolk 2460389", "Norway 23424910", "Nottingham 30720", "Novosibirsk 2122541", "Odesa 929398", "Okayama 90036018", "Okinawa 2345896", "Oklahoma City 2464592", "Omaha 2465512", "Oman 23424898", "Omsk 2122641", "Orlando 2466256", "Osaka 15015370", "Oslo 862592", "Ottawa 3369", "Pakistan 23424922", "Palembang 1048059", "Palermo 719846", "Palma 769293", "Panama 23424924", "Paris 615702", "Pasig 1187115", "Patna 2295381", "Pekanbaru 1040779", "Perm 2122814", "Perth 1098081", "Peru 23424919", "Petaling 56013632", "Philadelphia 2471217", "Philippines 23424934", "Phoenix 2471390", "Pittsburgh 2473224", "Plymouth 32185", "Poland 23424923", "Port Elizabeth 1586614", "Port Harcourt 1404447", "Portland 2475687", "Porto Alegre 455823", "Portsmouth 32452", "Portugal 23424925", "PoznaD 514048", "Preston 32566", "Pretoria 1586638", "Providence 2477058", "Puebla 137612", "Puerto Rico 23424935", "Pune 2295412", "Qatar 23424930", "Quebec 3444", "Quer้taro 138045", "Quezon City 1199682", "Quito 375732", "Rajkot 2295404", "Raleigh 2478307", "Ranchi 2295383", "Rawalpindi 2211387", "Recife 455824", "Rennes 619163", "Richmond 2480894", "Riga 854823", "Rio de Janeiro 455825", "Riyadh 1939753", "Rome 721943", "Rosario 466862", "Rostov-on-Don 2123177", "Rotterdam 733075", "Russia 23424936", "Sacramento 2486340", "Sagamihara 1118072", "Saint Petersburg 2123260", "Saitama 1116753", "Salt Lake City 2487610", "Saltillo 141272", "Salvador 455826", "Samara 2077746", "San Antonio 2487796", "San Diego 2487889", "San Francisco 2487956", "San Jose 2488042", "San Luis Potosํ 144265", "Santiago 349859", "Santo Domingo 76456", "Sapporo 1118108", "Saudi Arabia 23424938", "Seattle 2490383", "Semarang 1048324", "Sendai 1118129", "Seongnam 1132559", "Seoul 1132599", "Seville 774508", "Sharjah 1940119", "Sheffield 34503", "Singapore 1062617", "Singapore 23424948", "South Africa 23424942", "Soweto 1587677", "Spain 23424950", "Srinagar 2295387", "St. Louis 2486982", "Stockholm 906057", "Stoke-on-Trent 36240", "Strasbourg 627791", "Stuttgart 698064", "Surabaya 1044316", "Surat 2295405", "Suwon 1132567", "Swansea 36758", "Sweden 23424954", "Switzerland 23424957", "Sydney 1105779", "Sใo Luํs 455834", "Sใo Paulo 455827", "Taguig 1195098", "Takamatsu 1118285", "Tallahassee 2503713", "Tampa 2503863", "Tangerang 1048536", "Tel Aviv 1968212", "Thailand 23424960", "Thane 2295410", "Thessaloniki 963291", "Tijuana 149361", "Tokyo 1118370", "Toluca 149769", "Toronto 4118", "Toulouse 628886", "Tucson 2508428", "Turin 725003", "Turkey 23424969", "Turmero 395277", "Ufa 2124045", "Ukraine 23424976", "Ulsan 1132578", "United Arab Emirates 23424738", "United Kingdom 23424975", "United States 23424977", "Utrecht 734047", "Valencia 395272", "Valencia 776688", "Valparaiso 349861", "Vancouver 9807", "Venezuela 23424982", "Vienna 551801", "Vietnam 23424984", "Virginia Beach 2512636", "Vladivostok 2124288", "Volgograd 2124298", "Voronezh 2108210", "Warsaw 523920", "Washington 2514815", "Winnipeg 2972", "Wroclaw 526363", "Yekaterinburg 2112237", "Yokohama 1118550", "Yongin 1132094", "Zamboanga City 1199980", "Zapopan 151582", "Zaporozhye 939628", "Zaragoza 779063", "Zurich 784794", " " }));
-
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -95,15 +101,28 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
 
         jLabel5.setText("Number of Result(s) :");
 
-        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane3.setToolTipText("");
-        jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        jScrollPane3.setWheelScrollingEnabled(false);
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jTextArea3.setEditable(false);
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jLabel4.setText("Description :");
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel7.setText("Welcome to tweet search [ Dev by IsReal]");
+
+        jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane4.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        jTextArea4.setEditable(false);
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jTextArea4.setAutoscrolls(false);
+        jScrollPane4.setViewportView(jTextArea4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,52 +133,56 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(102, 102, 102)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField2)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jScrollPane2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 1, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34))
+                .addContainerGap())
         );
 
         jComboBox1.getAccessibleContext().setAccessibleName("");
@@ -169,7 +192,27 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-       
+        String mode = jComboBox1.getSelectedItem().toString();
+        switch (mode) {
+            case "Search Tweets":
+                {
+                    jTextArea1.removeAll();
+                    jTextArea2.setText("Searching tweets using hashtags. \n( Input words no need #.) ");
+                    break;
+                }
+                case "Search From Users":
+                {
+                    jTextArea1.removeAll();
+                    jTextArea2.setText("Searching tweets using username. \n( Input words no need @.) ");
+                    break;
+                }
+                case "Current Trends Tweets":
+                {
+                    jTextField2.setText("Worldwide");
+                    jTextArea2.setText("Get current world 50 trends. \n(No need to input keywords.) ");
+                    break;
+                }
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -177,31 +220,36 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        t = new Tweet();
-        List<String> res = new ArrayList<>();
-        String mode = (String)jComboBox1.getSelectedItem();
-        //t = new Tweet();
+        String mode = jComboBox1.getSelectedItem().toString();
+        Tweet tweets = new Tweet();
         switch (mode) {
             case "Search Tweets":
                 {
-                    res = t.hashtag(jTextField2.getText());
-                    for(String a:res){
-                        jTextArea1.append(a);
-                    }
+                    jTextArea4.removeAll();
+                    
+                    tweets.newGetTweets(jTextField2.getText(), jTextArea1,jTextArea4);
                     break;
                 }
                 case "Search From Users":
                 {
-                    t.getUserTweets(jTextField2.getText());
+                    jTextArea4.removeAll();
+                    
+                    tweets.getUserTweets(jTextField2.getText(),jTextArea1,jTextArea4);
                     break;
                 }
                 case "Current Trends Tweets":
                 {
+                    jTextArea4.removeAll();
                     
+                    tweets.getCurrentTrends(1, jTextArea1,jTextArea4);
                     break;
                 }
         }
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,11 +281,12 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            
+            @Override
             public void run() {
                 new TwitterSearchGUI().setVisible(true);
             }
         });
+        
     }
 
     
@@ -245,17 +294,19 @@ public class TwitterSearchGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
